@@ -1,9 +1,9 @@
-# Technical Trading Rules — Profitability Analysis
+# Technical Trading Rules: Profitability Analysis
 # Backtesting framework across SPY / GLD, weekly data 2005–2024
 # Methodology follows Gerritsen et al. (2020); LW (2008) Sharpe test via PeerPerformance
 
 rm(list = ls(all = TRUE))
-setwd("~/Desktop/dissertation kings/results code/GLD")
+# Outputs (CSV tables and PDF figures) are written to the current working directory.
 
 library("TTR")
 library("quantmod")
