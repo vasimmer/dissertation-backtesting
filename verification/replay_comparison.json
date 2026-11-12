@@ -1,0 +1,8 @@
+{
+  "drawdown_all.csv": "byte-identical",
+  "drawdown_convention_check.csv": "byte-identical",
+  "drawdown_summary.csv": "byte-identical",
+  "sessionInfo.txt": "DIFFERS/missing",
+  "timing_all.csv": "byte-identical",
+  "timing_intervals.csv": "byte-identical"
+}

@@ -1,0 +1,20 @@
+=== 1. IDENTITY  52*mean(Ix) = 52*f*mean(x) + 52*cov_n(I,x) ===
+   mu 0.1492525759 | baseline+tau 0.1492525759 | diff 5.55e-17
+   tau 0.0498873250 | cov_n*52 0.0498873250 | diff 3.47e-17  -> tau IS the n-denominator covariance
+   (R's cov() uses n-1: 0.0511664872, which is NOT what is used)
+
+=== 2. AVERAGING POSITIONS == MEAN OF PER-RULE COVARIANCES ===
+   mean of 7 per-rule covariances 0.000626129055
+   covariance of the averaged position 0.000626129055
+   diff 0.00e+00  -> identical, as claimed
+
+=== 3. CIRCULAR BLOCK INDEXING ===
+   starts: 3 38 1 | block length 5 
+   indices: 3 4 5 6 7 38 39 40 1 2 1 2 3 4 5 
+   block 1 consecutive? TRUE 
+   block 2 wraps 38,39,40,1,2? 38,39,40,1,2 
+   -> consecutive within block and circular at the boundary: CORRECT
+
+=== 4. ANNUALISATION ===
+   weekly mean x52. For a mean-return decomposition this is the standard linear
+   annualisation and is internally consistent across mu, baseline and tau.
